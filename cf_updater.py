@@ -79,6 +79,8 @@ def main():
                     "client_default": location_is_default
                 }
             )
+            if json.loads(req.text)['success'] == True:
+                print("Successfully synced the gateway location :)")
         except Exception as e:
             time.sleep(3)
             continue
