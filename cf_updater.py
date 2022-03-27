@@ -32,7 +32,7 @@ def main():
                 }
             )
             res = json.loads(req.text)
-            cf_account_id = res['result'][0]['id']
+            cf_account_id = res['result'][0]['id'] # usually the first element of the array, However that's still not the best practice. Change the index if necessary
             break
         except Exception as e:
             time.sleep(3)
